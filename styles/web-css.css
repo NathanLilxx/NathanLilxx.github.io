@@ -1,0 +1,406 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+
+.Sub-Nev
+{   
+    box-sizing:border-box;
+    overflow: hidden;
+    position: relative;
+    width: 989px;
+    height: 45px;
+    top: 18px;
+    
+    margin:auto;
+}
+.Element 
+{
+    color:black;
+    text-decoration: none;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+    
+  }
+.Element:active
+{
+    color:#FF595A;
+}
+.Logo
+{
+    text-decoration: none;
+    display:block;
+    
+    position: absolute;
+    width: 36px;
+    height: 36px;
+
+    background: #2A7DE1;
+    border-radius: 10px;
+
+    font-family: Original Surfer;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.Logo-1
+{
+    position: absolute;
+    width: 51px;
+    height: 30px;
+    left: 40px;
+    top: 3px;
+    
+    font-family: Original Surfer;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    /* identical to box height */
+    text-align: center;
+    color: #000000;
+}
+.SignUp
+{
+    text-decoration: none;
+    display:block;
+    
+    position: absolute;
+    width: 100.46px;
+    height: 36px;
+    right: 0px;
+    top: 0px;
+
+    background: #2A7DE1;
+    border-radius: 10px;
+
+    text-align: center;
+    line-height:36px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.SignUp:hover,.SignUp:active
+{
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+	background-color:#266dc5;
+}
+
+.Main-Nev
+{
+    box-sizing:border-box;
+    position:relative;
+    width: 983px;
+    height: 45px;
+    top: 42px;
+
+    margin:auto;
+}
+.Back
+{
+    z-index: 1;
+    text-decoration: none;
+
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 28px;
+    
+    color: #2A7DE1;    
+}
+.Search
+{
+    z-index: 1;
+    position: absolute;
+    width: 103px;
+    right: 0px;
+    top: 20%;
+    bottom: 22.22%;
+    
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+    line-height: 16px;
+    text-align:center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    color: #000000;
+}
+
+
+.Hero-B
+{
+    box-sizing:border-box;
+    overflow: hidden;
+    position: relative;
+    width: 983px;
+    height: 1377px;
+    top: 29px;
+    margin:auto;
+}
+.Main
+{
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    
+    color: #000000;
+}
+.column1
+{
+    position: absolute;
+    width: 552px;
+    height: 467px;
+    left: 40px;
+    top: 127px;    
+}
+.column1-img
+{
+    height:335px;
+    width: 575px;
+    background: #C4C4C4;
+}
+.column2
+{
+    position: absolute;
+    width: 347px;
+    height: 467px;
+    right: 0px;
+    top: 127px;
+    
+    background: #E5E5E5;
+}
+.column2-main
+{
+    position:absolute;
+    left: 19px;
+    top: 20px;    
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+.column2-list
+{
+    position:absolute;
+    left: 10px;
+    top: 65px;
+}
+.portrait{
+    height:170px;
+    width: 125px;
+    background: #C4C4C4;
+}
+
+
+.body
+{
+    position: absolute;
+    width: 680px;
+    height: 562px;
+    left: 40px;
+    top: 620px;   
+}
+.body p
+{
+    font-family: sans-serif;
+    text-align: justify;
+    text-indent: 12px;
+}
+
+
+
+.Hero-Line
+{
+    position: absolute;
+    width: 680px;
+    height: 0px;
+    left: 40px;
+    bottom: 223px;
+     
+    background: #000000;
+    border: 1px solid #000000;
+}
+
+.Reply
+{
+    box-sizing:border-box;
+    position: absolute;
+    width: 680px;
+    height: 167px;
+    bottom:18px;
+    left:40px;    
+}
+        /*文章回复邮件栏*/
+        textarea{
+            display: inline-block;
+            background: #C4C4C4;
+            border: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+        
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+        textarea:focus {background-color:#b8b7b7;outline: none;}
+        
+        input[type=text].text1{
+            position: absolute;
+            width: 313px;
+            height: 30px;
+            left: 367px;
+            top: 54px;
+            
+            border: none;
+            background: #C4C4C4;
+        
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+        input[type=text].text2{
+            position: absolute;
+            width: 313px;
+            height: 30px;
+            left: 367px;
+            top: 94px;
+            
+            border: none;
+            background: #C4C4C4;
+        }
+        input[type=text]:focus {background-color:#b8b7b7;outline: none;-webkit-transition: 0.5s;
+            transition: 0.5s;}
+        
+        input[type=submit] {
+            position: absolute;
+            width: 97px;
+            height: 36px;
+            left: calc(50% - 97px/2 + 75.5px);
+            bottom: 0px;
+            background-color: #2A7DE1;
+            
+        
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            
+            color: #E5E5E5;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 16px;
+            
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        
+        }
+        input[type=submit]:hover {background-color: #2775d4;}
+
+.Foot
+{
+    box-sizing:border-box;
+    position: relative;
+    width: 989px;
+    height: 178px;
+    top:80px;
+    margin:auto;
+}
+.Foot-address
+{
+    position: absolute;
+    width: 141px;
+    height: 68px;
+    left: 848px;
+    top: 21px;
+
+    color: #000000;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.GetStarted
+{
+    text-decoration: none;
+    display:block;
+    
+    position: absolute;
+    width: 97px;
+    height: 36px;
+    left: 0px;
+    bottom: 69px;
+    
+
+    background: #2A7DE1;
+    border-radius: 10px;
+
+    text-align: center;
+    line-height:36px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.GetStarted:hover,.GetStarted.SignUp:active
+{
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+	background-color:#266dc5;
+}
+.Foot-Line
+{
+    position: absolute;
+    width: 989px;
+    height: 0px;
+    left: -1px;
+    bottom: 50px;
+    
+    background: #000000;
+    border: 1px solid #000000;
+}
+.Foot-last
+{
+    position: absolute;
+    right: 4px;
+    bottom: 25px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #000000;
+    
+}

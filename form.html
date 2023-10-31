@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MovieViews</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    h2 {
+      color: #333333;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333333;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    input[type="file"] {
+      margin-bottom: 10px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #4c9eda;
+      color: #ffffff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #388ac6;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>电影信息</h2>
+  <form>
+    <label for="movieName">电影名称:</label>
+    <input type="text" id="movieName" name="movieName"><br><br>
+    
+    <label for="moviePhoto">电影照片:</label>
+    <input type="file" id="moviePhoto" name="moviePhoto" multiple><br><br>
+    
+    <label for="movieRating">电影评分:</label>
+    <input type="number" id="movieRating" name="movieRating" min="0" max="10" step="0.1"><br><br>
+    
+    <label for="director">导演:</label>
+    <input type="text" id="director" name="director"><br><br>
+    
+    <label for="cast">主演:</label>
+    <textarea id="cast" name="cast" rows="4" cols="30"></textarea><br><br>
+    
+    <label for="genres">电影类型:</label><br>
+    <input type="checkbox" id="action" name="genres" value="动作">
+    <label for="action">动作</label><br>
+    <input type="checkbox" id="comedy" name="genres" value="喜剧">
+    <label for="comedy">喜剧</label><br>
+    <input type="checkbox" id="drama" name="genres" value="剧情">
+    <label for="drama">剧情</label><br>
+    <input type="checkbox" id="thriller" name="genres" value="惊悚">
+    <label for="thriller">惊悚</label><br>
+    
+    
+    <br>
+    <input type="submit" value="提交">
+  </form>
+</body>
+</html>
