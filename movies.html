@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Movie</title>
+        <link href="styles/layout.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <aside class="sidebar">
+                <div class="sidebar-main">
+                    <ul>
+
+                        <li title="电影" class="selected"><a href="movies.html"><span>电影</span></a></li>
+                        <li title="评测"><a href="reviews.html"><span>评测</span></a></li>
+                        <li title="新增"><a href="form.html"><span>新增</span></a></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="mainblock">
+                <section class="stripe">     <!-- 功能：允许用户“复选”电影类型，根据选中的“电影类型”展示相应的电影列表-->
+                    <label><input type="checkbox" name="movieType" value="documentary"> 纪录片</label>
+                    <label><input type="checkbox" name="movieType" value="war"> 战争</label> 
+                    <label><input type="checkbox" name="movieType" value="history"> 历史</label>
+                    <label><input type="checkbox" name="movieType" value="crime"> 犯罪</label>
+                    <label><input type="checkbox" name="movieType" value="family"> 家庭</label>
+                    <!-- 功能：根据上映日期筛选-->
+                </section>
+                <section class="movie-list"><!-- 功能：电影列表方格式展示-->
+                
+                    <div class="movies">
+                        <img src="imgs/2.png" class="list-img"/>
+                        <div class="movie-content">
+                            <p>评分 9</p>
+                            <p>肖申克的救赎</p>
+                            <p>1994 2h22m</p>
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="imgs/3.png"/>
+                        <div class="list-content">
+                            <p>评分 9</p>
+                            <p>肖申克的救赎</p>
+                            <p>1994 2h22m</p>
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="imgs/4.png" class="list-img"/>
+                        <div class="list-content">
+                            <p>评分 9</p>
+                            <p>肖申克的救赎</p>
+                            <p>1994 2h22m</p>
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="imgs/3.png" class="list-img"/>
+                        <div class="list-content">
+                            <p>评分 9</p>
+                            <p>肖申克的救赎</p>
+                            <p>1994 2h22m</p>
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="imgs/4.png" class="list-img"/>
+                        <div class="list-content">
+                            <p>评分 9</p>
+                            <p>肖申克的救赎</p>
+                            <p>1994 2h22m</p>
+                        </div>
+                    </div>
+                    <div class="movies">
+                        <img src="imgs/3.png" class="list-img"/>
+                        <div class="list-content">
+                            <p>评分 9</p>
+                            <p>肖申克的救赎</p>
+                            <p>1994 2h22m</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
