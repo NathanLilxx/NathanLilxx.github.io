@@ -1,0 +1,150 @@
+.stripe {
+
+border-radius: 4px;
+padding: 10px;
+}
+
+.stripe label {
+display: inline-block;
+margin-right: 20px;
+}
+
+.stripe input[type="checkbox"] {
+margin-right: 10px;
+}
+
+.stripe label:hover {
+color: #333;
+cursor: pointer;
+}
+
+
+.movie{
+    margin: 5px;
+    width: 23%;
+    float: left;
+}
+.movie-img{
+    width: 90%;
+    height: auto;
+}
+.movie-info p,.movie-info h3{
+    margin: 0;
+}
+
+
+/* 黑色卡片样式 */
+#info-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(49, 47, 47, 0.951);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000; /* 确保卡片位于页面最上方 */
+}
+
+/* 隐藏类 */
+.hidden {
+    display: none;
+}
+
+
+/* 显示类 */
+.show {
+    display: block;
+}
+
+/* 电影信息样式 */
+.movie-info{
+    cursor: pointer;
+    /* 其他样式 */
+}
+
+.close-icon {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 34px; /* 或根据您的设计需要调整大小 */
+    font-weight: bold;
+    color: white; /* 或您选择的任何颜色 */
+  }
+  
+  /* 为关闭图标添加悬停效果 */
+  .close-icon:hover {
+    color: #ccc; /* 悬停时的颜色变化 */
+  }
+  
+
+
+.review-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding-right: 5px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+    .review-score {
+        padding: 20px;
+        background: #EFEFEF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #333;
+    }
+    
+        .score-hexagon {
+            width: 90px;
+            height: 90px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+        
+        .score-hexagon span {
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            z-index: 1;
+        }
+    
+    .review-content {
+        min-width: 200px;
+        padding: 20px;
+        flex: 1;
+    }
+    
+    .review-content h2 {
+        margin: 0;
+        color: #333;
+    }
+    
+    .review-content p {
+        color: #666;
+    }
+    
+    .review-author {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        color: #333;
+    }
+    
+    .review-image {
+        display: block;
+        margin: auto;
+    }
+    
+    .review-image img {
+        max-width: 300px;
+        height: auto;
+    }

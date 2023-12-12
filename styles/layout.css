@@ -1,5 +1,7 @@
+body{
+    margin: 0;
+}
 .page-wrapper {
-    display: block;
     background-color: #f6f8f7;
 }
   
@@ -43,59 +45,6 @@
         background: #ddd;
     }
 
-
-    .stripe {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
-    }
-
-    .stripe label {
-    display: inline-block;
-    margin-right: 20px;
-    }
-
-    .stripe input[type="checkbox"] {
-    margin-right: 10px;
-    }
-
-    .stripe label:hover {
-    color: #333;
-    cursor: pointer;
-    }
-
 .mainblock {
-    margin-left: 20%;  
-}
-
-
-.movie-list{
-    box-sizing: border-box;
-}
-
-.movies{
-    margin: 5px;
-    width: 24%;
-    float: left;
-}
-
-.movies img{
-    width: 80%;
-    height: auto;
-}
-p{
-    margin: 0;
-}
-
-.articles div{
-
-    padding: 70px 0;
-}
-
-.articles img{
-    margin-top: 15px;
-    margin-right: 15px;
-    float: left;
-    height:150px;
-    width: auto;
+    margin-left: 21%;  
 }

@@ -1,0 +1,114 @@
+article.reviews{
+    padding: 20px;
+    text-align: left;
+}
+.link-movie{
+    font-weight: bold;
+    color: #bf1313;
+}
+.title {
+    font-size: 28px;
+    color: #333;
+}
+.author-date {
+    font-size: 16px;
+    color: #666;
+}
+.article-cover {
+    width: 60%;
+    height: auto;
+    
+}
+.article-body {
+    width: 70%;
+    font-size: 18px;
+    color: #333;
+    text-align: justify;
+}
+
+.review-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    width: 70%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+    .review-score {
+        padding: 20px;
+        background: #EFEFEF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+        .score-hexagon {
+            width: 90px;
+            height: 90px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+        
+        .score-hexagon span {
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            z-index: 1;
+        }
+    
+    .review-content {
+        min-width: 200px;
+        padding: 20px;
+        flex: 1;
+    }
+    
+    .review-content h2 {
+        margin: 0;
+        color: #333;
+    }
+    
+    .review-content p {
+        color: #666;
+    }
+    
+    .review-author {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .review-image {
+        display: block;
+        margin: auto;
+    }
+    
+    .review-image img {
+        max-width: 300px;
+        height: auto;
+    }
+
+@media screen and (max-width: 768px) {
+    .review-card {
+        flex-direction: column; /* 小屏幕上堆叠布局 */
+    }
+    
+    .review-score,
+    .review-content {
+        width: 100%; /* 设置宽度为100%，以便填满容器宽度 */
+        /* 确保padding, margin, border不会让内容溢出 */
+        box-sizing: border-box; 
+    }
+    .review-image img{
+        max-width: 100%;
+    }
+    
+    .review-score {
+        order: -1; /* 将评分移动到最上方 */
+    }
+}

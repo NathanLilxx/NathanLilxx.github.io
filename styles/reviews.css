@@ -1,0 +1,12 @@
+
+.articles div{
+    padding: 70px 0;
+}
+
+.articles img{
+    margin-top: 15px;
+    margin-right: 15px;
+    float: left;
+    height:150px;
+    width: auto;
+}
