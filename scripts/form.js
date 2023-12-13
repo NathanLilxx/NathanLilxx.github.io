@@ -17,7 +17,7 @@ function checkLogin() {
         window.location.href = 'login.html'; // 将 'login.html' 替换为你的登录页面URL
     } else {
         // 用户已登录，可以继续留在当前页面或执行其他操作
-        console.log('User is logged in.');
+        document.body.style.display = 'block';
     }
 }
 
