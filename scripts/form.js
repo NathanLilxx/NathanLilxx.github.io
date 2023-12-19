@@ -14,7 +14,7 @@ function checkLogin() {
     // 检查本地存储中的登录状态
     if (!isLoggedIn) {
         // 如果未登录，重定向到登录页面
-        window.location.href = 'login'; // 将 'login' 替换为你的登录页面URL
+        window.location.href = '../login'; // 将 'login' 替换为你的登录页面URL
     } else {
         // 用户已登录，可以继续留在当前页面或执行其他操作
         document.body.style.display = 'block';

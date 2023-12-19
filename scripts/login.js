@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         // 存储用户登录状态
         document.cookie = "loggedIn=true; max-age=3600; path=/";
         alert('Login successful');
-        window.location.href = 'form';
+        window.location.href = '../form';
     } else {
         alert('Invalid credentials');
     }
