@@ -48,7 +48,7 @@ document.getElementById('movieForm').addEventListener('submit', function(event) 
     // 将更新后的电影数组存储回localStorage
     localStorage.setItem('movies', JSON.stringify(movies));
 
-    alert('电影信息已保存！');
+    alert('提交成功！');
 
     window.location.href = '../movies';
 });

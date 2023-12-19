@@ -9,7 +9,7 @@ function displayMovies(filterTypes = []) {
     var movies = JSON.parse(localStorage.getItem('movies')) || [];
 
     movies.forEach(function(movie) {
-        if (filterTypes.length === 0 || filterTypes.includes(movie.type)) {
+        if (filterTypes.length === 0 || movie.genres.some(genres => filterTypes.includes(genres))) {
             var movieArticle = document.createElement('article');
             movieArticle.className = 'movie';
         
