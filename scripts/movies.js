@@ -1,3 +1,55 @@
+// 当页面加载完成时执行
+window.onload = function() {
+    var moviesList = document.getElementById('moviesList'); // 获取页面中用于展示电影列表的元素
+    var movies = JSON.parse(localStorage.getItem('movies')) || []; // 从localStorage中读取电影数据
+
+    // 遍历所有电影数据
+    //movies.forEach(function(movie) {
+    //    var div = document.createElement('div'); // 创建一个新的div元素用于展示电影信息
+    //    div.innerHTML = '<h2>' + movie.movieName + '</h2>' +
+    //                    // 根据需要添加更多的电影信息展示
+    //                    '';
+    //    moviesList.appendChild(div); // 将这个div添加到页面上
+    //});
+    
+    movies.forEach(function(movie) {
+        var movieArticle = document.createElement('article');
+        movieArticle.className = 'movie';
+    
+        var movieImg = document.createElement('img');
+        movieImg.src = '../imgs/4.png'; // 假设图片路径是固定的，或者从movie对象中获取
+        movieImg.className = 'movie-img';
+    
+        var movieInfoDiv = document.createElement('div');
+        movieInfoDiv.className = 'movie-info';
+        movieInfoDiv.setAttribute('onclick', 'showCard(this)'); // 添加点击事件
+    
+        var movieTitle = document.createElement('h3');
+        movieTitle.textContent = movie.movieName; // 从movie对象获取电影名称
+    
+        var movieRating = document.createElement('p');
+        movieRating.textContent = '评分 ' + movie.movieRating; // 从movie对象获取评分
+    
+        var movieYearDuration = document.createElement('p');
+        // 假设您存储了年份和时长，可以这样组合它们
+        movieYearDuration.textContent = movie.year;
+    
+        // 将这些元素组合起来
+        movieInfoDiv.appendChild(movieTitle);
+        movieInfoDiv.appendChild(movieRating);
+        movieInfoDiv.appendChild(movieYearDuration);
+    
+        movieArticle.appendChild(movieImg);
+        movieArticle.appendChild(movieInfoDiv);
+    
+        // 将完整的article元素添加到页面上
+        moviesList.appendChild(movieArticle);
+    });
+    
+};
+
+
+
 // 显示卡片的函数
 function showCard(element) {
 // 获取电影的信息

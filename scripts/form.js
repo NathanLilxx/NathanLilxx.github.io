@@ -24,3 +24,30 @@ function checkLogin() {
 console.log('Current Cookies:', document.cookie);
 // 页面加载时调用
 checkLogin();
+
+
+// 为表单添加提交事件监听器
+document.getElementById('movieForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // 阻止表单的默认提交行为
+
+    // 收集表单中的数据
+    var movieData = {
+        // 这里需要根据实际的表单元素ID来获取值
+        movieName: document.getElementById('movieName').value,
+        movieRating: document.getElementById('movieRating').value,
+        year: document.getElementById('year').value,
+        genres: [...document.querySelectorAll('[name="genres"]:checked')].map(el => el.value),
+        summary: document.getElementById('summary').value
+        // ...收集其他表单数据...
+    };
+
+    // 读取localStorage中已有的电影信息
+    var movies = JSON.parse(localStorage.getItem('movies')) || [];
+    movies.push(movieData); // 将新的电影数据添加到数组中
+
+    // 将更新后的电影数组存储回localStorage
+    localStorage.setItem('movies', JSON.stringify(movies));
+
+    alert('电影信息已保存！');
+});
+

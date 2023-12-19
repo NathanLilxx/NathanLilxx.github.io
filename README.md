@@ -1,5 +1,5 @@
 # 电影日志
-## Github页面部署：nathanlilxx.github.io/movies
+## Github页面部署：nathanlilxx.github.io
 ## 网站内容
 ### 一、结构类型
   - 电影
@@ -25,9 +25,9 @@
 
 参考网站：[IMDB](https://www.imdb.com/) [IGN](https://www.imdb.com/)
 ### 三、基本界面
-
+（早期模型图：与当前搭建版本字段结构大致相同，但布局更改）
 - 页面类型模板
-  ![页面类型模板](Main-Web.png)
+  ![页面类型模板](imgs/Main-Web.png)
 - 内容类型模板
-  ![内容类型模板](Content-Web.png)
+  ![内容类型模板](imgs/Content-Web.png)
 
