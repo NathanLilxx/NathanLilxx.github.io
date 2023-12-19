@@ -49,5 +49,7 @@ document.getElementById('movieForm').addEventListener('submit', function(event) 
     localStorage.setItem('movies', JSON.stringify(movies));
 
     alert('电影信息已保存！');
+
+    window.location.href = '../movies';
 });
 
