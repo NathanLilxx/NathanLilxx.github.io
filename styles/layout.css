@@ -2,7 +2,7 @@ body{
     margin: 0;
 }
 .page-wrapper {
-    background-color: #f6f8f7;
+    background-color: #efefef;
 }
   
 .sidebar {
@@ -35,6 +35,7 @@ body{
         padding: 10px;
         background: #f1f1f1;
         border-radius: 4px;
+        transition:box-shadow 0.3s;
     }
     
     .sidebar-main .selected a {
@@ -43,6 +44,7 @@ body{
     
     .sidebar-main a:hover {
         background: #ddd;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24), 0 4px 8px 0 rgba(0,0,0,0.19);
     }
 
 .mainblock {

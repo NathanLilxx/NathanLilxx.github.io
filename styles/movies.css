@@ -1,21 +1,41 @@
 .stripe {
-
-border-radius: 4px;
 padding: 10px;
 }
 
 .stripe label {
 display: inline-block;
-margin-right: 20px;
+padding-top: 7px;
+padding-right: 16px;
+padding-bottom: 7px;
+padding-left: 0px;
+
 }
 
 .stripe input[type="checkbox"] {
 margin-right: 10px;
+background-color: #fff;
+
 }
+
 
 .stripe label:hover {
 color: #333;
 cursor: pointer;
+}
+
+.stripeButton {
+
+    background-color: #ddd;
+    border: none;
+    padding: 7px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition:box-shadow 0.3s;
+}
+
+.stripeButton:hover {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24), 0 4px 8px 0 rgba(0,0,0,0.19);
 }
 
 
@@ -35,7 +55,7 @@ cursor: pointer;
 
 /* 黑色卡片样式 */
 #info-card {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -44,6 +64,7 @@ cursor: pointer;
     padding: 20px;
     border-radius: 10px;
     z-index: 1000; /* 确保卡片位于页面最上方 */
+    
 }
 
 /* 隐藏类 */
