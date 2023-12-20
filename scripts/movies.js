@@ -9,6 +9,7 @@ function setMovies(){
 
     // 将更新后的电影数组存储回localStorage
     localStorage.setItem('movies', JSON.stringify(newMovies));
+    displayMovies();
 }
 function displayMovies(filterTypes = []) {
     var moviesList = document.getElementById('moviesList');
