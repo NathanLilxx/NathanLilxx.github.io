@@ -21,7 +21,7 @@ function checkLogin() {
     }
 }
 
-console.log('Current Cookies:', document.cookie);
+
 // 页面加载时调用
 checkLogin();
 

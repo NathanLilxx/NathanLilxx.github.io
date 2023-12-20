@@ -1,9 +1,15 @@
 // 当页面加载时，加载所有电影
 window.onload = function() {
-    localStorage.setItem('movies','[{"movieName":"Braveheart","movieRating":"8.3","year":"1995","genres":["history"],"summary":"Scottish warrior William Wallace leads his countrymen in a rebellion to free his homeland from the tyranny of King Edward I of England."},{"movieName":"Pulp Fiction","movieRating":"8.9","year":"1994","genres":["crime"],"summary":"The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."},{"movieName":"1917","movieRating":"8.2","year":"2019","genres":["war"],"summary":"April 6th, 1917. As an infantry battalion assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap."},{"movieName":"Nomadland","movieRating":"7.3","year":"2020","genres":["family"],"summary":"A woman in her sixties, after losing everything in the Great Recession, embarks on a journey through the American West, living as a van-dwelling modern-day nomad."},{"movieName":"Depp V Heard","movieRating":"5.1","year":"2023","genres":["documentary"],"summary":"Showing both testimonies side-by-side for the first time, this series explores the trial that set Hollywood ablaze and the online fallout that ensued."}]');
     displayMovies();
 };
+function setMovies(){
+    var movies = JSON.parse(localStorage.getItem('movies')) || [];
+    var movieData=[{"movieName":"Braveheart","movieRating":"8.3","year":"1995","genres":["history"],"summary":"Scottish warrior William Wallace leads his countrymen in a rebellion to free his homeland from the tyranny of King Edward I of England."},{"movieName":"Pulp Fiction","movieRating":"8.9","year":"1994","genres":["crime"],"summary":"The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."},{"movieName":"1917","movieRating":"8.2","year":"2019","genres":["war"],"summary":"April 6th, 1917. As an infantry battalion assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap."},{"movieName":"Nomadland","movieRating":"7.3","year":"2020","genres":["family"],"summary":"A woman in her sixties, after losing everything in the Great Recession, embarks on a journey through the American West, living as a van-dwelling modern-day nomad."},{"movieName":"Depp V Heard","movieRating":"5.1","year":"2023","genres":["documentary"],"summary":"Showing both testimonies side-by-side for the first time, this series explores the trial that set Hollywood ablaze and the online fallout that ensued."}];
+    var newMovies = movies.concat(movieData); // 将新的电影数据添加到数组中
 
+    // 将更新后的电影数组存储回localStorage
+    localStorage.setItem('movies', JSON.stringify(newMovies));
+}
 function displayMovies(filterTypes = []) {
     var moviesList = document.getElementById('moviesList');
     moviesList.innerHTML = ''; // 清空当前列表
