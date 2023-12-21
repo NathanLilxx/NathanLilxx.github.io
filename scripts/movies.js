@@ -67,11 +67,7 @@ function showCard(element) {
     var title = element.querySelector('h3').innerText;
     var movies = JSON.parse(localStorage.getItem('movies')) || [];
     var movie = movies.find(m => m.movieName === title);
-    if (movie) {
-        var summary = movie.summary;
-    } else {
-        var summary = '银行家安迪因被误判为枪杀妻子及其情人的罪名入狱后，他不动声色、步步为营地谋划自我拯救并最终成功越狱，重获自由';
-    }
+    var summary = movie.summary;
 
     // 将信息设置到卡片中
     document.getElementById('card-title').innerText = title;
