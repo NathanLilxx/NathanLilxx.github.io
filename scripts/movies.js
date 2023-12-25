@@ -114,7 +114,7 @@ function showCard(element) {
 
 //创建影评的函数
 function createReview(){
-    document.getElementById('card-title').innerText = title;
+    title = document.getElementById('card-title').innerText;
     window.location.href = '../form?option=reviewForm&name=' + encodeURIComponent(title);
 }
 
