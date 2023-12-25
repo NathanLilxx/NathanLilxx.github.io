@@ -55,14 +55,24 @@ cursor: pointer;
     color: #0d55b4;
 }
 
+#overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
 
 /* 黑色卡片样式 */
 #info-card {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(49, 47, 47, 0.951);
+    background-color: rgb(49, 47, 47);
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -70,16 +80,6 @@ cursor: pointer;
     
 }
 
-/* 隐藏类 */
-.hidden {
-    display: none;
-}
-
-
-/* 显示类 */
-.show {
-    display: block;
-}
 
 /* 电影信息样式 */
 .movie-info{
@@ -119,7 +119,6 @@ cursor: pointer;
         padding: 20px;
         background: #EFEFEF;
         display: flex;
-        flex-direction: column;
         align-items: center;
         color: #333;
     }

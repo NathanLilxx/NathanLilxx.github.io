@@ -62,7 +62,17 @@ function filterMovies() {
     displayMovies(selectedTypes);
 }
 
-
+document.getElementById("overlay").addEventListener("click", function() {
+    document.getElementById("info-card").style.display = "none";
+    this.style.display = "none";
+});
+function toggleScrolling(allowScrolling) {
+    if (allowScrolling) {
+        document.body.style.overflow = 'auto';
+    } else {
+        document.body.style.overflow = 'hidden';
+    }
+}
 
 // 显示卡片的函数
 function showCard(element) {
@@ -79,15 +89,15 @@ function showCard(element) {
     document.getElementById('card-summary').innerText = summary;
 
     // 显示卡片
-    var card = document.getElementById('info-card');
-    card.classList.remove('hidden');
-    card.classList.add('show');
+    document.getElementById('info-card').style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+    toggleScrolling(false);
 }
 
 // 隐藏卡片的函数
 function hideCard() {
-    var card = document.getElementById('info-card');
-    card.classList.remove('show');
-    card.classList.add('hidden');
+    document.getElementById('info-card').style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+    toggleScrolling(true);
 }
   

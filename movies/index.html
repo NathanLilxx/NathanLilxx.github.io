@@ -5,7 +5,6 @@
         <title>Movie Diary</title>
         <link rel="stylesheet" href="../styles/layout.css"/>
         <link rel="stylesheet" href="../styles/movies.css"/>
-        <script type="text/javascript" src="../scripts/movies.js"></script>
         
     </head>
     <body>
@@ -42,25 +41,23 @@
                     </article>
                     -->
                 </section>
-                <div id="info-card" class="hidden">
+                <div id="overlay" style="display:none;"></div>
+                <div id="info-card" style="display:none;">
                     <h2 id="card-title">电影名称</h2>
                     <p id="card-summary">电影梗概</p>
                     <div class="review-card">
                         <div class="review-score">
                           <div class="score-hexagon">
-                            <span>7</span>
+                            <span>8</span>
                           </div>
-                          <h3>评分：7分</h3>
                         </div>
                         <div class="review-content">
-                          <h2>良好</h2>
-                          <a href="m1.html"><p>雷德利·斯科特导演的法国皇帝传记片将一次有趣的角色研究藏在了一部马马虎虎的历史史诗片中。</p></a>
-                          <div class="review-author">
-                            <span>by A.A. Dowd</span>
-                          </div>
+                            <h2>良好</h2>
+                            <a href="m1.html"><p>雷德利·斯科特导演的法国皇帝传记片将一次有趣的角色研究藏在了一部马马虎虎的历史史诗片中。</p></a>
+                            <p>by A.A. Dowd</p>
                         </div>
                         <div class="review-image">
-                          <img src="../imgs/Oppen.png" alt="Movie Scene" />
+                            <img src="../imgs/Oppen.png" alt="Movie Scene" />
                         </div>
                     </div>
                     <!-- 添加一个关闭按钮 -->
@@ -68,6 +65,9 @@
                 </div>
             </div>
         </div>
+        
+        <script type="text/javascript" src="../scripts/movies.js"></script>
     </body>
+    
 </html>
 
