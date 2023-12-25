@@ -14,17 +14,38 @@ function checkLogin() {
     // 检查本地存储中的登录状态
     if (!isLoggedIn) {
         // 如果未登录，重定向到登录页面
-        window.location.href = '../login'; // 将 'login' 替换为你的登录页面URL
+        window.location.href = '../login'; 
     } else {
         // 用户已登录，可以继续留在当前页面或执行其他操作
         document.body.style.display = 'block';
     }
 }
 
-
 // 页面加载时调用
 checkLogin();
 
+//获取url
+const currentUrl = window.location.href;
+const params = {};
+const queryString = currentUrl.substring(currentUrl.indexOf('?') + 1);
+queryString.split('&').forEach((paramString) => {
+  const [key, value] = paramString.split('=');
+  params[decodeURIComponent(key)] = decodeURIComponent(value);
+});
+const option = params.option;
+const movieName = params.name;
+
+window.onload = function() {
+    displayform();
+};
+function displayform(){
+    if(option){
+        document.getElementById('movieForm').style.display = 'none';
+        document.getElementById('reviewForm').style.display = 'block';
+        var form = document.getElementById("reviewForm");
+        form.querySelector('#movieName').value = movieName;
+    }
+} 
 document.getElementById('formSelector').addEventListener('change', function() {
     var movieForm = document.getElementById('movieForm');
     var reviewForm = document.getElementById('reviewForm');
@@ -37,10 +58,6 @@ document.getElementById('formSelector').addEventListener('change', function() {
         case 'reviewForm':
             movieForm.style.display = 'none';
             reviewForm.style.display = 'block';
-            break;
-        default:
-            movieForm.style.display = 'none';
-            reviewForm.style.display = 'none';
             break;
     }
     
@@ -70,9 +87,10 @@ document.getElementById('movieForm').addEventListener('submit', function(event) 
     // 将更新后的电影数组存储回localStorage
     localStorage.setItem('movies', JSON.stringify(movies));
 
-    alert('提交成功！');
+    alert('下一步');
 
-    window.location.href = '../movies';
+    //window.location.href = '../movies';
+    window.location.href = '../form?option=reviewForm&name=' + encodeURIComponent(document.getElementById('movieName').value);
 });
 
 // 为影评表单添加提交事件监听器

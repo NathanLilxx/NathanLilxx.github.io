@@ -114,7 +114,8 @@ function showCard(element) {
 
 //创建影评的函数
 function createReview(){
-    window.location.href = '../form';
+    document.getElementById('card-title').innerText = title;
+    window.location.href = '../form?option=reviewForm&name=' + encodeURIComponent(title);
 }
 
 // 隐藏卡片的函数

@@ -8,9 +8,9 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     if (username === '123' && password === '123') {
         // 存储用户登录状态
         document.cookie = "loggedIn=true; max-age=3600; path=/";
-        alert('Login successful');
-        window.location.href = '../form';
+        alert('登录成功');
+        window.history.back();
     } else {
-        alert('Invalid credentials');
+        alert('登录失败');
     }
 });
