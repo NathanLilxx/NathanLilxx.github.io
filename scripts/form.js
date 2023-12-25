@@ -80,7 +80,7 @@ document.getElementById('reviewForm').addEventListener('submit', function(event)
     event.preventDefault(); // 阻止表单的默认提交行为
     var form = document.getElementById("reviewForm");
     
-    var movieName = querySelector('#movieName').value;
+    var movieName = form.querySelector('#movieName').value;
 
     var movies = JSON.parse(localStorage.getItem('movies')) || [];
     var movie = movies.find(m => m.movieName === movieName);
