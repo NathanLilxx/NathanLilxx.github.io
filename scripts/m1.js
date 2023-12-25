@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
 });
+
+//关联电影的回转
 document.getElementById('movieName').addEventListener('click', function() {
   e.preventDefault();
   window.history.back();

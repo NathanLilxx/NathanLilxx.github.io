@@ -111,9 +111,10 @@ function showCard(element) {
     document.getElementById("overlay").style.display = "block";
     toggleScrolling(false);
 }
+//影评正文的跳转
 document.getElementById('linkReview').addEventListener('click', function(e) {
     e.preventDefault();
-    window.location.href = e.href;
+    window.location.href = e.target.href;
   
   });
 
