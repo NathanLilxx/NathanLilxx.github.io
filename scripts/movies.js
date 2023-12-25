@@ -92,7 +92,7 @@ function showCard(element) {
     document.getElementById('card-summary').innerText = movie.summary;
     
     if(review){
-        document.getElementById('reviewCard').style.display = "block";
+        document.getElementById('reviewCard').style.display = "flex";
         document.getElementById('createButton').style.display = "none";
 
         document.getElementById('reviewRating').innerText = review.reviewRating;
