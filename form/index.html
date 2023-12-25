@@ -11,31 +11,31 @@
   <h2>电影信息</h2>
   <form id="movieForm">
     <label for="moviePhoto">电影照片:</label>
-    <input type="file" id="moviePhoto" name="moviePhoto" ><br>
+    <input type="text" id="moviePhoto" name="moviePhoto" value="../imgs/The Shawshank Redemption.png"><br>
 
     <label for="movieName">电影名称:</label>
-    <input type="text" id="movieName" name="movieName" value="勇敢的心"><br><br>
+    <input type="text" id="movieName" name="movieName" value="肖申克的救赎"><br><br>
     
     <label for="movieRating">电影评分:</label>
-    <input type="number" id="movieRating" name="movieRating" min="0" max="10" step="0.1" value="8.3"><br><br>
+    <input type="number" id="movieRating" name="movieRating" min="0" max="10" step="0.1" value="9.3"><br><br>
 
     <label for="year">年份:</label>
-    <input type="number" id="year" name="year" min="1800" max="2030" value="1995"><br><br>
+    <input type="number" id="year" name="year" min="1800" max="2030" value="1994"><br><br>
 
     <label for="genres">电影类型:</label><br>
     <input type="checkbox" id="documentary" name="genres" value="documentary">
     <label for="documentary">纪录片</label><br>
     <input type="checkbox" id="war" name="genres" value="war">
     <label for="war">战争</label><br>
-    <input type="checkbox" id="history" name="genres" value="history" checked>
+    <input type="checkbox" id="history" name="genres" value="history">
     <label for="history">历史</label><br>
-    <input type="checkbox" id="crime" name="genres" value="crime">
+    <input type="checkbox" id="crime" name="genres" value="crime" checked>
     <label for="crime">犯罪</label><br>
     <input type="checkbox" id="family" name="genres" value="family">
     <label for="family">家庭</label><br><br>
 
     <label for="summary">电影梗概:</label>
-    <textarea id="summary" name="summary">影片以13-14世纪英格兰的宫廷政治为背景，以战争为核心，讲述了苏格兰起义领袖威廉·华莱士与英格兰统治者不屈不挠斗争的故事。</textarea><br><br>
+    <textarea id="summary" name="summary">主要讲述了银行家安迪因被误判为枪杀妻子及其情人的罪名入狱后，他不动声色、步步为营地谋划自我拯救并最终成功越狱，重获自由的故事。</textarea><br><br>
 
     <input type="submit" value="提交">
   </form>

@@ -33,6 +33,7 @@ document.getElementById('movieForm').addEventListener('submit', function(event) 
     // 收集表单中的数据
     var movieData = {
         // 这里需要根据实际的表单元素ID来获取值
+        moviePhoto: document.getElementById('moviePhoto').value,
         movieName: document.getElementById('movieName').value,
         movieRating: document.getElementById('movieRating').value,
         year: document.getElementById('year').value,
