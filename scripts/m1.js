@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 document.getElementById('movieName').addEventListener('click', function() {
-
+  e.preventDefault();
   window.history.back();
 
 });
