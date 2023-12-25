@@ -43,6 +43,7 @@ document.getElementById('formSelector').addEventListener('change', function() {
             reviewForm.style.display = 'none';
             break;
     }
+    
 });
 
 
@@ -69,7 +70,7 @@ document.getElementById('movieForm').addEventListener('submit', function(event) 
     // 将更新后的电影数组存储回localStorage
     localStorage.setItem('movies', JSON.stringify(movies));
 
-    alert('电影提交成功！');
+    alert('提交成功！');
 
     window.location.href = '../movies';
 });
@@ -78,28 +79,41 @@ document.getElementById('movieForm').addEventListener('submit', function(event) 
 document.getElementById('reviewForm').addEventListener('submit', function(event) {
     event.preventDefault(); // 阻止表单的默认提交行为
     var form = document.getElementById("reviewForm");
+    
+    var movieName = querySelector('#movieName').value;
 
+    var movies = JSON.parse(localStorage.getItem('movies')) || [];
+    var movie = movies.find(m => m.movieName === movieName);
 
-    var reviewData = {
-        // 这里需要根据实际的表单元素ID来获取值
-        movieName: form.querySelector('#movieName').value,
-        reviewPhoto: form.querySelector('#reviewPhoto').value,
-        reviewName: form.querySelector('#reviewName').value,
-        writer: form.querySelector('#writer').value,
-        date: form.querySelector('#date').value,
-        reviewRating: form.querySelector('#reviewRating').value,
-        summary: form.querySelector('#summary').value,
-        body: form.querySelector('#body').value
-    };
-
-    // 读取localStorage中已有的电影信息
     var reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-    reviews.push(reviewData); // 将新的电影数据添加到数组中
+    var review = reviews.find(r => r.movieName === movieName);
 
-    // 将更新后的影评数组存储回localStorage
-    localStorage.setItem('reviews', JSON.stringify(reviews));
+    if(movie&!review){
+        var reviewData = {
+            // 这里需要根据实际的表单元素ID来获取值
+            movieName: form.querySelector('#movieName').value,
+            reviewPhoto: form.querySelector('#reviewPhoto').value,
+            reviewName: form.querySelector('#reviewName').value,
+            writer: form.querySelector('#writer').value,
+            date: form.querySelector('#date').value,
+            reviewRating: form.querySelector('#reviewRating').value,
+            summary: form.querySelector('#summary').value,
+            body: form.querySelector('#body').value
+        };
+    
+        // 读取localStorage中已有的电影信息
+        var reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+        reviews.push(reviewData); // 将新的电影数据添加到数组中
+    
+        // 将更新后的影评数组存储回localStorage
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+    
+        alert('提交成功！');
+    
+        window.location.href = '../movies';
+    }else{
+        alert('关联电影不存在或影评已建立');
+    }
 
-    alert('影评提交成功！');
-
-    window.location.href = '../movies';
+    
 });
