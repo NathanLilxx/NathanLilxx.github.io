@@ -23,7 +23,7 @@ function checkLogin() {
 
 
 // 页面加载时调用
-checkLogin();
+//checkLogin();
 
 document.getElementById('formSelector').addEventListener('change', function() {
     var movieForm = document.getElementById('movieForm');
@@ -88,7 +88,7 @@ document.getElementById('reviewForm').addEventListener('submit', function(event)
     var reviews = JSON.parse(localStorage.getItem('reviews')) || [];
     var review = reviews.find(r => r.movieName === movieName);
 
-    if(movie&!review){
+    if(movie&&(review === undefined)){
         var reviewData = {
             // 这里需要根据实际的表单元素ID来获取值
             movieName: form.querySelector('#movieName').value,
@@ -113,6 +113,7 @@ document.getElementById('reviewForm').addEventListener('submit', function(event)
         window.location.href = '../movies';
     }else{
         alert('关联电影不存在或影评已建立');
+        
     }
 
     
