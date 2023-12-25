@@ -31,3 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
 });
+document.getElementById('movieName').addEventListener('click', function() {
+
+  window.history.back();
+
+});
