@@ -24,7 +24,6 @@ cursor: pointer;
 }
 
 .stripeButton {
-
     background-color: #ddd;
     border: none;
     padding: 7px 16px;
@@ -73,11 +72,12 @@ cursor: pointer;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(49, 47, 47);
+    max-height: 80%;
     color: white;
     padding: 20px;
     border-radius: 10px;
     z-index: 1000; /* 确保卡片位于页面最上方 */
-    
+    overflow: auto;
 }
 
 
@@ -86,6 +86,20 @@ cursor: pointer;
     cursor: pointer;
     /* 其他样式 */
 }
+
+.createButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ddd;
+    border: none;
+    padding: 7px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition:box-shadow 0.3s;
+}
+
 
 .close-icon {
     position: absolute;
@@ -116,11 +130,12 @@ cursor: pointer;
   }
   
     .review-score {
-        padding: 20px;
-        background: #EFEFEF;
         display: flex;
+        justify-content: center;
         align-items: center;
-        color: #333;
+        padding: 20px;
+        flex: 1;
+        background: #EFEFEF;
     }
     
         .score-hexagon {
@@ -141,6 +156,10 @@ cursor: pointer;
         }
     
     .review-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
         min-width: 200px;
         padding: 20px;
         flex: 1;
@@ -165,6 +184,7 @@ cursor: pointer;
     .review-image {
         display: block;
         margin: auto;
+        
     }
     
     .review-image img {

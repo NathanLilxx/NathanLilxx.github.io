@@ -46,7 +46,7 @@
                     <h2 id="card-title">电影名称</h2>
                     <p id="card-summary">电影梗概</p>
 
-                    <div class="review-card">
+                    <div class="review-card" id="reviewCard" style="display:none;">
                         <div class="review-score">
                           <div class="score-hexagon">
                             <span id="reviewRating">影评评分</span>
@@ -60,6 +60,8 @@
                             <img src="#" id="reviewPhoto" alt="Movie Scene" />
                         </div>
                     </div>
+
+                    <button onclick="createReview()" class="createButton" id="createButton" style="display:none;">创建影评</button>
                     
                     <!-- 添加一个关闭按钮 -->
                     <span class="close-icon" onclick="hideCard()">&times;</span>

@@ -65,6 +65,7 @@ function filterMovies() {
 document.getElementById("overlay").addEventListener("click", function() {
     document.getElementById("info-card").style.display = "none";
     this.style.display = "none";
+    toggleScrolling(true);
 });
 function toggleScrolling(allowScrolling) {
     if (allowScrolling) {
@@ -91,11 +92,17 @@ function showCard(element) {
     document.getElementById('card-summary').innerText = movie.summary;
     
     if(review){
+        document.getElementById('reviewCard').style.display = "block";
+        document.getElementById('createButton').style.display = "none";
+
         document.getElementById('reviewRating').innerText = review.reviewRating;
         document.getElementById('summary').innerText = review.summary;
-        document.getElementById('writer').innerText = review.writer;
+        document.getElementById('writer').innerText = "——" + review.writer;
         document.getElementById('reviewPhoto').src = review.reviewPhoto;
         document.getElementById('linkReview').href = "m1.html?movie=" + encodeURIComponent(title);
+    }else{
+        document.getElementById('reviewCard').style.display = "none";
+        document.getElementById('createButton').style.display = "block";
     }
     
 
@@ -103,6 +110,11 @@ function showCard(element) {
     document.getElementById('info-card').style.display = "block";
     document.getElementById("overlay").style.display = "block";
     toggleScrolling(false);
+}
+
+//创建影评的函数
+function createReview(){
+    window.location.href = '../form';
 }
 
 // 隐藏卡片的函数
