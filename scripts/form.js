@@ -23,7 +23,7 @@ function checkLogin() {
 
 
 // 页面加载时调用
-//checkLogin();
+checkLogin();
 
 document.getElementById('formSelector').addEventListener('change', function() {
     var movieForm = document.getElementById('movieForm');

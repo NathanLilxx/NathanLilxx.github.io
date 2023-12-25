@@ -45,21 +45,22 @@
                 <div id="info-card" style="display:none;">
                     <h2 id="card-title">电影名称</h2>
                     <p id="card-summary">电影梗概</p>
+
                     <div class="review-card">
                         <div class="review-score">
                           <div class="score-hexagon">
-                            <span>8</span>
+                            <span id="reviewRating">影评评分</span>
                           </div>
                         </div>
                         <div class="review-content">
-                            <h2>良好</h2>
-                            <a href="m1.html"><p>雷德利·斯科特导演的法国皇帝传记片将一次有趣的角色研究藏在了一部马马虎虎的历史史诗片中。</p></a>
-                            <p>by A.A. Dowd</p>
+                            <a id="linkReview" href="#"><p id="summary">影评梗概</p></a>
+                            <p id="writer">作者</p>
                         </div>
                         <div class="review-image">
-                            <img src="../imgs/Oppen.png" alt="Movie Scene" />
+                            <img src="#" id="reviewPhoto" alt="Movie Scene" />
                         </div>
                     </div>
+                    
                     <!-- 添加一个关闭按钮 -->
                     <span class="close-icon" onclick="hideCard()">&times;</span>
                 </div>

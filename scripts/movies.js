@@ -81,12 +81,23 @@ function showCard(element) {
     var title = element.querySelector('h3').innerText;
     var movies = JSON.parse(localStorage.getItem('movies')) || [];
     var movie = movies.find(m => m.movieName === title);
-    var summary = movie.summary;
+
+    var reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    var review = reviews.find(r => r.movieName === title);
+
 
     // 将信息设置到卡片中
     document.getElementById('card-title').innerText = title;
-
-    document.getElementById('card-summary').innerText = summary;
+    document.getElementById('card-summary').innerText = movie.summary;
+    
+    if(review){
+        document.getElementById('reviewRating').innerText = review.reviewRating;
+        document.getElementById('summary').innerText = review.summary;
+        document.getElementById('writer').innerText = review.writer;
+        document.getElementById('reviewPhoto').src = review.reviewPhoto;
+        document.getElementById('linkReview').href = "m1.html?movie=" + encodeURIComponent(title);
+    }
+    
 
     // 显示卡片
     document.getElementById('info-card').style.display = "block";
