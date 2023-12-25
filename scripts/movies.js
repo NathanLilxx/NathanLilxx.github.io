@@ -4,11 +4,11 @@ window.onload = function() {
 };
 function setMovies(){
     var movies = JSON.parse(localStorage.getItem('movies')) || [];
-    var movieData=[{"moviePhoto":"../imgs/Braveheart.png","movieName":"Braveheart","movieRating":"8.3","year":"1995","genres":["history"],"summary":"Scottish warrior William Wallace leads his countrymen in a rebellion to free his homeland from the tyranny of King Edward I of England."},
-                {"moviePhoto":"../imgs/Pulp Fiction.png","movieName":"Pulp Fiction","movieRating":"8.9","year":"1994","genres":["crime"],"summary":"The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."},
-                {"moviePhoto":"../imgs/1917.png","movieName":"1917","movieRating":"8.2","year":"2019","genres":["war"],"summary":"April 6th, 1917. As an infantry battalion assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap."},
-                {"moviePhoto":"../imgs/Nomadland.png","movieName":"Nomadland","movieRating":"7.3","year":"2020","genres":["family"],"summary":"A woman in her sixties, after losing everything in the Great Recession, embarks on a journey through the American West, living as a van-dwelling modern-day nomad."},
-                {"moviePhoto":"../imgs/Depp V Heard.png","movieName":"Depp V Heard","movieRating":"5.1","year":"2023","genres":["documentary"],"summary":"Showing both testimonies side-by-side for the first time, this series explores the trial that set Hollywood ablaze and the online fallout that ensued."}];
+    var movieData=[{"moviePhoto":"../imgs/Braveheart.png","movieName":"勇敢的心","movieRating":"8.3","year":"1995","genres":["history"],"summary":"影片以13-14世纪英格兰的宫廷政治为背景，以战争为核心，讲述了苏格兰起义领袖威廉·华莱士与英格兰统治者不屈不挠斗争的故事。"},
+                {"moviePhoto":"../imgs/Pulp Fiction.png","movieName":"低俗小说","movieRating":"8.9","year":"1994","genres":["crime"],"summary":"该片讲述了由“文森特和马沙的妻子”、“金表”、“邦妮的处境”三个故事以及影片首尾的序幕和尾声五个部分组成。"},
+                {"moviePhoto":"../imgs/1917.png","movieName":"1917","movieRating":"8.2","year":"2019","genres":["war"],"summary":"该片以第一次世界大战为背景，讲述了2名英国战士，为拯救1600名战友，逆行传讯，跨越生死，使命必达的故事。"},
+                {"moviePhoto":"../imgs/Nomadland.png","movieName":"无依之地","movieRating":"7.3","year":"2020","genres":["family"],"summary":"该片改编自美国作家杰西卡·布鲁德的同名小说，讲述了在经济大萧条中失去了工作和家园的弗恩开始住在房车中，一边打工一边旅游，并遇到了各色各样的人的故事"},
+                {"moviePhoto":"../imgs/Depp V Heard.png","movieName":"德普大战希尔德","movieRating":"5.1","year":"2023","genres":["documentary"],"summary":"聚焦约翰尼·德普和安珀·希尔德关系破裂的审判案件，讲述了审判过程及其对所有相关人员的影响，以及当事人为何决定将其作为一场公开的法律官司而非私人官司。"}];
     var newMovies = movies.concat(movieData); // 将新的电影数据添加到数组中
 
     // 将更新后的电影数组存储回localStorage
