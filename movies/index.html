@@ -19,15 +19,18 @@
                 </div>
             </aside>
             <div class="mainblock">
-                <section class="stripe">     <!-- 功能：允许用户“复选”电影类型，根据选中的“电影类型”展示相应的电影列表-->
+                <section class="stripe">
                     <label><input type="checkbox" name="movieType" value="documentary"> 纪录片</label>
                     <label><input type="checkbox" name="movieType" value="war"> 战争</label> 
                     <label><input type="checkbox" name="movieType" value="history"> 历史</label>
                     <label><input type="checkbox" name="movieType" value="crime"> 犯罪</label>
                     <label><input type="checkbox" name="movieType" value="family"> 家庭</label>
-                    <!-- 功能：根据上映日期筛选-->
                     <button onclick="filterMovies()" class="stripeButton">筛选</button>
                     <button onclick="setMovies()" class="stripeButton">添加预设</button>
+                    
+                    <input type="text" id="searchBox" placeholder="输入电影名称...">
+                    <button onclick="searchMovie()" class="search-button">搜索</button>
+
                 </section>
                 <section id='moviesList' class="movie-list"><!-- 功能：电影列表方格式展示-->
                     <!--

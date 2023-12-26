@@ -15,13 +15,15 @@ function setMovies(){
     localStorage.setItem('movies', JSON.stringify(newMovies));
     displayMovies();
 }
-function displayMovies(filterTypes = []) {
+
+function displayMovies(filterTypes = [],searchText = '') {
     var moviesList = document.getElementById('moviesList');
     moviesList.innerHTML = ''; // 清空当前列表
     var movies = JSON.parse(localStorage.getItem('movies')) || [];
 
     movies.forEach(function(movie) {
-        if (filterTypes.length === 0 || movie.genres.some(genres => filterTypes.includes(genres))) {
+        if ((filterTypes.length === 0 || movie.genres.some(genre => filterTypes.includes(genre))) &&
+            (searchText === '' || movie.movieName.toLowerCase().includes(searchText.toLowerCase()))) {
             var movieArticle = document.createElement('article');
             movieArticle.className = 'movie';
         
@@ -60,6 +62,11 @@ function displayMovies(filterTypes = []) {
 function filterMovies() {
     var selectedTypes = Array.from(document.querySelectorAll('[name="movieType"]:checked')).map(el => el.value);
     displayMovies(selectedTypes);
+}
+
+function searchMovie() {
+    var searchText = document.getElementById('searchBox').value;
+    displayMovies([], searchText);
 }
 
 document.getElementById("overlay").addEventListener("click", function() {

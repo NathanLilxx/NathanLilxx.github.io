@@ -37,6 +37,30 @@ cursor: pointer;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24), 0 4px 8px 0 rgba(0,0,0,0.19);
 }
 
+/* 搜索框样式 */
+#searchBox {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+/* 搜索按钮样式 */
+.search-button{
+    padding: 7px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-button:hover{
+    background-color: #0056b3;
+}
+
 .movie-list{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(17%, 1fr));
