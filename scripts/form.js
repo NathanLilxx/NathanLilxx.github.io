@@ -42,6 +42,7 @@ function displayform(){
     if(option){
         document.getElementById('movieForm').style.display = 'none';
         document.getElementById('reviewForm').style.display = 'block';
+        document.getElementById("formSelector").value = "reviewForm";
         var form = document.getElementById("reviewForm");
         form.querySelector('#movieName').value = movieName;
     }

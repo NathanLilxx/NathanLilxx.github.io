@@ -77,6 +77,7 @@ function filterMovies() {
 
 function searchMovie() {
     var searchText = document.getElementById('searchBox').value;
+    //清楚复选框选中状态
     var movieTypes = document.querySelectorAll('[name="movieType"]');
     movieTypes.forEach(function(checkbox) {
         checkbox.checked = false;
