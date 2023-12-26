@@ -1,7 +1,18 @@
 // 当页面加载时，加载所有电影
 window.onload = function() {
+    checkFirstVisit();
     displayMovies();
 };
+function checkFirstVisit() {
+    if (localStorage.getItem("hasVisited") === null) {
+        // 用户第一次访问
+        setMovies(); 
+
+        // 设置标志，表明用户已经访问过
+        localStorage.setItem("hasVisited", "true");
+    }
+}
+
 function setMovies(){
     var movies = JSON.parse(localStorage.getItem('movies')) || [];
     var movieData=[{"moviePhoto":"../imgs/Braveheart.png","movieName":"勇敢的心","movieRating":"8.3","year":"1995","genres":["history"],"summary":"影片以13-14世纪英格兰的宫廷政治为背景，以战争为核心，讲述了苏格兰起义领袖威廉·华莱士与英格兰统治者不屈不挠斗争的故事。"},
@@ -13,7 +24,7 @@ function setMovies(){
 
     // 将更新后的电影数组存储回localStorage
     localStorage.setItem('movies', JSON.stringify(newMovies));
-    displayMovies();
+    console.log("欢迎首次访问！");
 }
 
 function displayMovies(filterTypes = [],searchText = '') {
@@ -66,6 +77,10 @@ function filterMovies() {
 
 function searchMovie() {
     var searchText = document.getElementById('searchBox').value;
+    var movieTypes = document.querySelectorAll('[name="movieType"]');
+    movieTypes.forEach(function(checkbox) {
+        checkbox.checked = false;
+    });
     displayMovies([], searchText);
 }
 
