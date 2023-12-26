@@ -88,10 +88,13 @@ document.getElementById('movieForm').addEventListener('submit', function(event) 
     // 将更新后的电影数组存储回localStorage
     localStorage.setItem('movies', JSON.stringify(movies));
 
-    alert('下一步');
-
-    //window.location.href = '../movies';
-    window.location.href = '../form?option=reviewForm&name=' + encodeURIComponent(document.getElementById('movieName').value);
+    if (confirm('是否继续创建影评')) {
+        // 如果用户确认，则进行页面跳转
+        window.location.href = '../form?option=reviewForm&name=' + encodeURIComponent(document.getElementById('movieName').value);
+    } else {
+        window.location.href = '../movies';
+    }
+    
 });
 
 // 为影评表单添加提交事件监听器
@@ -135,5 +138,4 @@ document.getElementById('reviewForm').addEventListener('submit', function(event)
         
     }
 
-    
 });
