@@ -134,7 +134,7 @@ function showCard(element) {
     document.getElementById("overlay").style.display = "block";
     toggleScrolling(false);
 }
-影评正文的跳转
+//影评正文的跳转
 document.getElementById('linkReview').addEventListener('click', function(e) {
     e.preventDefault();
     var href = e.target.closest('a').href;
